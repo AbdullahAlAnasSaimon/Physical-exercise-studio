@@ -1,0 +1,10 @@
+.workout{
+  width: 250px;
+  background-color: #efefef;
+  padding: 10px;
+  border-radius: 8px;
+}
+.workout-thumb{
+  width: 100%;
+  border-radius: 8px;
+}
