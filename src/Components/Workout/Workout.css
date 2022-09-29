@@ -33,3 +33,12 @@
   cursor: pointer;
   border-radius: 6px;
 }
+
+@media screen and (max-width: 576px) {
+ .workout{
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+ }  
+}

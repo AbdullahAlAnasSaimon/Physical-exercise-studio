@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Useractivity.css';
 import User from '../../images/user.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Useractivity = (props) => {
   const {second} = props;
@@ -17,6 +19,15 @@ const Useractivity = (props) => {
 
   // console.log(getBreakTimeFromLocalStorage);
 
+  const notify = () => toast.success('Activity Completed', {
+    position: "bottom-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
   return (
     <div className='user-activity'>
@@ -68,7 +79,8 @@ const Useractivity = (props) => {
         </div>
       </div>
 
-      <button className="activity-complete">Activity Completed</button>
+      <button onClick={notify} className="activity-complete">Complete Activity</button>
+      <ToastContainer/>
     </div>
   );
 };
