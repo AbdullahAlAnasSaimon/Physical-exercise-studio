@@ -21,7 +21,7 @@ const Useractivity = () => {
           <p>Weight</p>
         </div>
         <div className="height">
-          <h2>5.6<small>in</small></h2>
+          <h2>5.6'</h2>
           <p>Height</p>
         </div>
         <div className="age">
@@ -29,6 +29,31 @@ const Useractivity = () => {
           <p>Age</p>
         </div>
       </div>
+
+      <div className='break-container'>
+        <h2>Add a Break</h2>
+        <div className="break">
+          <button className="break-btn">10s</button>
+          <button className="break-btn">20s</button>
+          <button className="break-btn">30s</button>
+          <button className="break-btn">40s</button>
+          <button className="break-btn">50s</button>
+        </div>
+      </div>
+
+      <div className="exercise-details">
+        <h2>Exercise Details</h2>
+        <div className='exercise-time-container'>
+          <h4 className="time-title">Exercise Time</h4>
+          <div className="exercise-time">0s</div>
+        </div>
+        <div className="break-time-container">
+        <h4 className="break-title">Break Time</h4>
+          <div className="break-time">0s</div>
+        </div>
+      </div>
+
+      <button className="activity-complete">Activity Completed</button>
     </div>
   );
 };

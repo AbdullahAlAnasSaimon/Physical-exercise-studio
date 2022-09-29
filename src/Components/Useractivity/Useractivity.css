@@ -2,26 +2,34 @@
   position: sticky;
   top: 0;
 } */
-.user-container{
+.user-container {
   display: flex;
   align-items: center;
 }
-.user-img{
-  width: 60px;
+
+.user-img {
+  width: 55px;
   border-radius: 50%;
 }
-.user-details{
+
+.user-details {
   margin-left: 13px;
 }
-.user-name{
+
+.user-name {
   color: #424242;
-  font-size: 18px;
+  font-size: 17px;
 }
-.location{
+
+.location {
   color: #424242;
-  font-size: 14px;
+  font-size: 13px;
 }
-.user-physical-details{
+
+.user-physical-details,
+.break,
+.exercise-time-container,
+.break-time-container {
   display: flex;
   justify-content: space-around;
   background-color: #f8eded;
@@ -29,4 +37,35 @@
   margin-top: 20px;
   border-radius: 12px;
   color: #424242;
+}
+.exercise-time-container, .break-time-container{
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.break-container,
+.exercise-details {
+  margin-top: 20px;
+}
+
+.break-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100px;
+  background-color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.activity-complete {
+  width: 100%;
+  margin-top: 50px;
+  padding: 12px 0px;
+  font-size: 18px;
+  background-color: #ef5847;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
