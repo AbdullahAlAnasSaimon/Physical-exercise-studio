@@ -1,4 +1,23 @@
-.user-activity{
+/* .user-activity{
   position: sticky;
   top: 0;
+} */
+.user-container{
+  display: flex;
+  align-items: center;
+}
+.user-img{
+  width: 60px;
+  border-radius: 50%;
+}
+.user-details{
+  margin-left: 13px;
+}
+.user-name{
+  color: #424242;
+  font-size: 18px;
+}
+.location{
+  color: #424242;
+  font-size: 14px;
 }
