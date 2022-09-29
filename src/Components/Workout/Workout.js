@@ -6,11 +6,11 @@ const Workout = (props) => {
   return (
     <div className='workout'>
       <img className='workout-thumb' src={image} alt="" />
-      <h4>{title}</h4>
+      <h4 className='workout-title'>{title}</h4>
       <p>{body.slice(0, 80) + '.'}</p>
-      <h5>For Age: {age}</h5>
-      <h5>Workout Time: {duration}s</h5>
-      <button>Add To List</button>
+      <p>For Age : <strong>{age}</strong></p>
+      <p>Time Required : <strong>{duration}s</strong></p>
+      <button className='workout-btn'>Add To List</button>
     </div>
   );
 };
