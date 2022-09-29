@@ -21,3 +21,12 @@
   color: #424242;
   font-size: 14px;
 }
+.user-physical-details{
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8eded;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 12px;
+  color: #424242;
+}
