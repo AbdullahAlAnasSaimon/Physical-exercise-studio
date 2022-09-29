@@ -80,3 +80,6 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.activity-complete:hover{
+  background-color: #f67264;
+}

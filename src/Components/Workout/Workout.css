@@ -33,6 +33,9 @@
   cursor: pointer;
   border-radius: 6px;
 }
+.workout-btn:hover{
+  background-color: #f67264;
+}
 
 @media screen and (max-width: 576px) {
  .workout{
