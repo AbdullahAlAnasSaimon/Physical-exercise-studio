@@ -1,5 +1,5 @@
 .workout {
-  width: 250px;
+  width: auto;
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;
@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 576px) {
  .workout{
-  width: 100%;
+  width: 94%;
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;

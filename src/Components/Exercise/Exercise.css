@@ -44,6 +44,7 @@
   padding: 15px;
 }
 
+/* mobile device responsiveness */
 @media screen and (max-width: 576px) {
   .exercise-container {
     display: grid;
@@ -54,6 +55,36 @@
   .workout-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+/* tablet device responsiveness */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .exercise-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .workout-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+/* large screen device responsiveness */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .exercise-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .workout-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
