@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Useractivity.css';
 import User from '../../images/user.jpg';
 
 const Useractivity = (props) => {
   const {second} = props;
+
+  const [breakTime, setBreakTime] = useState('0 s');
+
+  const breakHandler = (event) =>{
+    // console.log('clicked', event.target.textContent);
+    const eventTarget = event.target.textContent;
+    setBreakTime(eventTarget);
+    localStorage.setItem('break-time', eventTarget);
+  }
+  const getBreakTimeFromLocalStorage = localStorage.getItem('break-time');
+
+  // console.log(getBreakTimeFromLocalStorage);
+
+
   return (
     <div className='user-activity'>
       <div className='user-container'>
@@ -34,11 +48,11 @@ const Useractivity = (props) => {
       <div className='break-container'>
         <h2>Add a Break</h2>
         <div className="break">
-          <button className="break-btn">10s</button>
-          <button className="break-btn">20s</button>
-          <button className="break-btn">30s</button>
-          <button className="break-btn">40s</button>
-          <button className="break-btn">50s</button>
+          <button onClick={breakHandler} className="break-btn">10 s</button>
+          <button onClick={breakHandler} className="break-btn">20 s</button>
+          <button onClick={breakHandler} className="break-btn">30 s</button>
+          <button onClick={breakHandler} className="break-btn">40 s</button>
+          <button onClick={breakHandler} className="break-btn">50 s</button>
         </div>
       </div>
 
@@ -50,7 +64,7 @@ const Useractivity = (props) => {
         </div>
         <div className="break-time-container">
         <h4 className="break-title">Break Time</h4>
-          <div className="break-time">0 second</div>
+          <div className="break-time">{breakTime ? getBreakTimeFromLocalStorage : breakTime}econd</div>
         </div>
       </div>
 
