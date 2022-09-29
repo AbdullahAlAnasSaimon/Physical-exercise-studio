@@ -3,6 +3,7 @@ import Useractivity from '../Useractivity/Useractivity';
 import Workout from '../Workout/Workout';
 import './Exercise.css';
 import Logo from '../../images/logo2.png';
+import Questions from '../CommonQuestion/Questions';
 
 const Exercise = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -40,6 +41,9 @@ const Exercise = () => {
         <div className="user-activity-container">
           <Useractivity second = {second}></Useractivity>
         </div>
+      </div>
+      <div className="common-question">
+        <Questions></Questions>
       </div>
     </div>
   );

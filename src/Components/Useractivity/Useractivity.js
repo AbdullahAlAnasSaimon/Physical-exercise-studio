@@ -75,7 +75,7 @@ const Useractivity = (props) => {
         </div>
         <div className="break-time-container">
         <h4 className="break-title">Break Time</h4>
-          <div className="break-time">{breakTime ? getBreakTimeFromLocalStorage : breakTime}econd</div>
+          <div className="break-time">{getBreakTimeFromLocalStorage ? getBreakTimeFromLocalStorage : breakTime}econd</div>
         </div>
       </div>
 
