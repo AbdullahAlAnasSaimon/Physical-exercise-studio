@@ -6,12 +6,19 @@ import Logo from '../../images/logo2.png';
 
 const Exercise = () => {
   const [workouts, setWorkouts] = useState([]);
+  const [second, setSecond] = useState(0);
   useEffect(() => {
     fetch('workouts.json')
       .then(res => res.json())
       .then(data => setWorkouts(data))
   }, []);
+
+  const btnClickHandle = (workout) =>{
+    const newSeconds = second + parseInt(workout.duration);
+    setSecond(newSeconds);
+  }
   return (
+
     <div>
       <div className='exercise-container'>
         <div className="logo-workout-wrapper">
@@ -23,11 +30,15 @@ const Exercise = () => {
           {/* select workout section start */}
           <h2 className='exercise-title'>Select today’s exercise</h2>
           <div className="workout-container">
-            {workouts.map(workout => <Workout key={workout.id} workout={workout}></Workout>)}
+            {workouts.map(workout => <Workout
+            key={workout.id}
+            workout={workout}
+            btnClickHandle = {btnClickHandle}
+            ></Workout>)}
           </div>
         </div>
         <div className="user-activity-container">
-          <Useractivity></Useractivity>
+          <Useractivity second = {second}></Useractivity>
         </div>
       </div>
     </div>

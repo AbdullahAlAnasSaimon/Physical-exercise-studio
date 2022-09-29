@@ -2,7 +2,8 @@ import React from 'react';
 import './Useractivity.css';
 import User from '../../images/user.jpg';
 
-const Useractivity = () => {
+const Useractivity = (props) => {
+  const {second} = props;
   return (
     <div className='user-activity'>
       <div className='user-container'>
@@ -45,11 +46,11 @@ const Useractivity = () => {
         <h2>Exercise Details</h2>
         <div className='exercise-time-container'>
           <h4 className="time-title">Exercise Time</h4>
-          <div className="exercise-time">0s</div>
+          <div className="exercise-time">{second} second</div>
         </div>
         <div className="break-time-container">
         <h4 className="break-title">Break Time</h4>
-          <div className="break-time">0s</div>
+          <div className="break-time">0 second</div>
         </div>
       </div>
 

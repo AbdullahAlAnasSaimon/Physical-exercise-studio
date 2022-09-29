@@ -2,7 +2,8 @@ import React from 'react';
 import './Workout.css';
 
 const Workout = (props) => {
-  const {image, title, body, age, duration} = props.workout;
+  const {btnClickHandle, workout} = props;
+  const {image, title, body, age, duration} = workout;
   return (
     <div className='workout'>
       <img className='workout-thumb' src={image} alt="" />
@@ -10,7 +11,7 @@ const Workout = (props) => {
       <p>{body.slice(0, 80) + '.'}</p>
       <p>For Age : <strong>{age}</strong></p>
       <p>Time Required : <strong>{duration}s</strong></p>
-      <button className='workout-btn'>Add To List</button>
+      <button className='workout-btn' onClick={() => btnClickHandle(workout)}>Add To List</button>
     </div>
   );
 };
